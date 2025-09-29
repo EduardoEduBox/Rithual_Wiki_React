@@ -1,68 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { FaEye } from "react-icons/fa";
-import { RiEyeCloseLine } from "react-icons/ri";
-import Navigation from "./Navigation.tsx";
-import Swal from "sweetalert2";
-import LanguageSwitcher from "../../components/common/LanguageSwitcher";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { FaEye } from 'react-icons/fa';
+import { RiEyeCloseLine } from 'react-icons/ri';
+import Navigation from './Navigation.tsx';
+import Swal from 'sweetalert2';
+import LanguageSwitcher from '../../components/common/LanguageSwitcher';
+import { useNavbar } from './hooks/useNavbar';
 
 const Navbar: React.FC = () => {
-  const { t } = useTranslation();
-  const [isActive, setActive] = useState(false);
-  const [tracker, setTracker] = useState(false);
-  const [showNavigation, setShowNavigation] = useState(false);
+  const { t, isActive, tracker, showNavigation, toggleNav, isMobile, randomProfile } = useNavbar();
 
-  const navClass = "ml-auto h-[75%] w-auto z-[999] active";
-
-  const toggleNav = () => {
-    if (isActive && tracker) {
-      setActive(false);
-      setTracker(false);
-    } else {
-      setTracker(true);
-      setActive(true);
-    }
-  };
-
-  useEffect(() => {
-    if (!showNavigation) {
-      setTimeout(() => {
-        setShowNavigation(true);
-      }, 500);
-    }
-  }, [isActive]);
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const profilePictures = [
-    "/CharacterSection/profile/Aika Profile.png",
-    "/CharacterSection/profile/Madger Profile.png",
-    "/CharacterSection/profile/Málanus Profile.png",
-    "/CharacterSection/profile/San Profile.png",
-    "/CharacterSection/profile/Singer Profile.png",
-  ];
-
-  const returnRandomCharacterPicture = () => {
-    const result =
-      profilePictures[Math.floor(Math.random() * profilePictures.length)];
-    return result;
-  };
+  const navClass = 'ml-auto h-[75%] w-auto z-[999] active';
 
   const readerInProduction = () => {
     return Swal.fire({
       title: `<strong style="color: pink">${t("readerTitle")}</strong>`,
       text: t("readerText"),
-      imageUrl: returnRandomCharacterPicture(),
+  imageUrl: randomProfile(),
       background: "rgb(31, 31, 31)",
       color: "white",
       imageWidth: "60%",
@@ -70,9 +23,7 @@ const Navbar: React.FC = () => {
       imageAlt: "san pensativo",
       showCancelButton: true,
       cancelButtonText: "Ok",
-      confirmButtonText: `<strong style="color: lightblue"><a href="${t(
-        "readerLinkText"
-      )}">Tapas.io</a></strong>`,
+      confirmButtonText: `<strong style="color: lightblue"><a href="${t('readerLinkText')}">Tapas.io</a></strong>`,
       confirmButtonColor: "#ff009d",
     });
   };
@@ -99,12 +50,7 @@ const Navbar: React.FC = () => {
         />
       )}
 
-      {isMobile &&
-        (tracker ? (
-          <RiEyeCloseLine className={navClass} onClick={toggleNav} />
-        ) : (
-          <FaEye className={navClass} onClick={toggleNav} />
-        ))}
+      {isMobile && (tracker ? <RiEyeCloseLine className={navClass} onClick={toggleNav} /> : <FaEye className={navClass} onClick={toggleNav} />)}
 
       {!isMobile && (
         <div className="ml-auto text-2xl">
@@ -131,11 +77,7 @@ const Navbar: React.FC = () => {
             </li>
 
             <li className="relative transition-transform hover:scale-110 group">
-              <a
-                href="#"
-                className="block py-2"
-                onClick={() => readerInProduction()}
-              >
+              <a href="#" className="block py-2" onClick={() => readerInProduction()}>
                 {t("readNow")}
               </a>
               <div className="absolute bottom-0 left-0 w-0 h-1 transition-all duration-300 ease-in-out bg-white rounded-full opacity-70 group-hover:w-full"></div>

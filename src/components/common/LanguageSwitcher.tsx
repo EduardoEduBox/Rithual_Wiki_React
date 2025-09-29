@@ -34,7 +34,11 @@ const LanguageSwitcher: React.FC = () => {
           backgroundColor: mappedLanguage === "en" ? "#de70a1" : undefined,
         }}
       >
-        <img src="/Icons/flagIcons/usIcon.png" alt="English" className="w-7 h-7" />
+        <img
+          src="/Icons/flagIcons/usIcon.png"
+          alt="English"
+          className="w-7 h-7"
+        />
       </button>
       <button
         onClick={() => handleLanguageChange("pt")}
@@ -43,7 +47,11 @@ const LanguageSwitcher: React.FC = () => {
           backgroundColor: mappedLanguage === "pt" ? "#de70a1" : undefined,
         }}
       >
-        <img src="/Icons/flagIcons/brazilIcon.png" alt="Portuguese" className="w-7 h-7" />
+        <img
+          src="/Icons/flagIcons/brazilIcon.png"
+          alt="Portuguese"
+          className="w-7 h-7"
+        />
       </button>
     </div>
   );

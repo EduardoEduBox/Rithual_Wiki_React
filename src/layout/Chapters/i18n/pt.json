@@ -1,0 +1,59 @@
+{
+  "title": "Capítulos",
+  "list": [
+    {
+      "id": 0,
+      "title": "Capítulo - 0: Invasão",
+      "shortTitle": "Invasão",
+      "cover": "/pt/ChapterSection/prePages/Rithual pré pagina cap 0.png",
+      "aditionalCover": "/pt/ChapterSection/toolTipPages/random1.png",
+      "description": "A carnificina assola o vilarejo enquanto um demônio mata impiedosamente. Um garoto se confronta com o assassino e uma lança revela seu verdadeiro poder.",
+      "url": "https://tapas.io/episode/2307820"
+    },
+    {
+      "id": 1,
+      "title": "Capítulo - 1: Padaria",
+      "shortTitle": "Padaria",
+      "cover": "/pt/ChapterSection/prePages/Rithual pré pagina cap 1.png",
+      "aditionalCover": "/pt/ChapterSection/toolTipPages/random2.png",
+      "description": "Singer sai de casa e vai à padaria em Belgadina. Novidades sobre sua matrícula escolar deixam-no ansioso. O que o futuro reserva para ele após essa compra significativa?",
+      "url": "https://tapas.io/episode/2478257"
+    },
+    {
+      "id": 2,
+      "title": "Capítulo - 2: Pai e irmão",
+      "shortTitle": "Pai e irmão",
+      "cover": "/pt/ChapterSection/prePages/Rithual pré pagina cap 2.png",
+      "aditionalCover": "/pt/ChapterSection/toolTipPages/random3.png",
+      "description": "Singer reflete sobre a matrícula escolar e suas expectativas de liberdade. Em casa, encontra seus familiares e descansa. O que o aguarda no tão esperado primeiro dia de aula?",
+      "url": "https://tapas.io/episode/2571907"
+    },
+    {
+      "id": 3,
+      "title": "Capítulo - 3: Paisagem",
+      "shortTitle": "Paisagem",
+      "cover": "/pt/ChapterSection/prePages/Rithual pré pagina cap 3.png",
+      "aditionalCover": "/pt/ChapterSection/toolTipPages/random4.png",
+      "description": "Singer está ansioso para o primeiro dia de aula. Seu irmão o acompanha e novas experiências o cercam. Chegando à escola, Singer está repleto de expectativas. O que o aguarda nesse novo ambiente?",
+      "url": "https://tapas.io/episode/2689791"
+    },
+    {
+      "id": 4,
+      "title": "Capítulo - 4: Escola",
+      "shortTitle": "Escola",
+      "cover": "/pt/ChapterSection/prePages/Rithual pré pagina cap 4.png",
+      "aditionalCover": "/pt/ChapterSection/toolTipPages/random5.png",
+      "description": "Singer maravilhado com a escola, adentra seus corredores. Enquanto isso, seu irmão deixa a escola, encontra seus parceiros e seguem em frente. A pergunta paira: estão realmente prontos? Armas são preparadas.",
+      "url": "https://tapas.io/episode/2846137"
+    },
+    {
+      "id": 5,
+      "title": "Capítulo - 5: Hatsúi",
+      "shortTitle": "Hatsúi",
+      "cover": "/pt/ChapterSection/prePages/Rithual pré pagina cap 5.png",
+      "aditionalCover": "/pt/ChapterSection/toolTipPages/random6.png",
+      "description": "No seu primeiro dia de aula, Singer conhece Hatsúi, um garoto alegre e bastante animado. Juntos, eles exploram a escola e conhecem outras pessoas, mas, enquanto eles conversam, algo os observa...",
+      "url": "https://tapas.io/episode/3228757"
+    }
+  ]
+}

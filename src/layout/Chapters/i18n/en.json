@@ -1,0 +1,23 @@
+{
+  "title": "Chapters",
+  "list": [
+    {
+      "id": 0,
+      "title": "Chapter - 0: Invasion",
+      "shortTitle": "Invasion",
+      "cover": "/en/ChapterSection/prePages/Rithual pre page cap 0.png",
+      "aditionalCover": "/en/ChapterSection/toolTipPages/random1.png",
+      "description": "Carnage ravages the village as a demon kills merciless, a boy confronts the killer and a spear reveals its true power.",
+      "url": "https://tapas.io/episode/2733466"
+    },
+    {
+      "id": 1,
+      "title": "Chapter - 1: Bakery",
+      "shortTitle": "Bakery",
+      "cover": "/en/ChapterSection/prePages/Rithual pre page cap 1.png",
+      "aditionalCover": "/en/ChapterSection/toolTipPages/random2.png",
+      "description": "Singer leaves home and goes to the bakery in Belgadina. News about his school enrollment make him anxious. What does the future hold for him after this significant purchase?",
+      "url": "https://tapas.io/episode/3159389"
+    }
+  ]
+}

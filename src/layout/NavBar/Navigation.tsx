@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
-import Swal from "sweetalert2";
-import LanguageSwitcher from "../../components/common/LanguageSwitcher";
-import { useTranslation } from "react-i18next";
+import { useEffect, useRef } from 'react';
+import Swal from 'sweetalert2';
+import LanguageSwitcher from '../../components/common/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
+import type { NavPosition } from './model/types';
 
 const Navigation = ({
   tracker,
@@ -9,7 +10,7 @@ const Navigation = ({
   toggleNav,
 }: {
   tracker: boolean;
-  position: "left" | "right";
+  position: NavPosition;
   toggleNav: () => void;
 }) => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -24,27 +25,22 @@ const Navigation = ({
         sectionEl.style.transform = "translateX(0)";
       } else {
         sectionEl.style.transition = "transform 0.2s ease";
-        sectionEl.style.transform = `translateX(${position === "left" ? 0 : "calc(100% + 1.5rem)"})`;
+        sectionEl.style.transform = `translateX(${
+          position === "left" ? 0 : "calc(100% + 1.5rem)"
+        })`;
       }
     }
   }, [tracker, position]);
 
   const profilePictures = [
-    "/CharacterSection/profile/Aika Profile.png",
-    "/CharacterSection/profile/Madger Profile.png",
-    "/CharacterSection/profile/Málanus Profile.png",
-    "/CharacterSection/profile/San Profile.png",
-    "/CharacterSection/profile/Singer Profile.png",
+    '/CharacterSection/profile/Aika Profile.png',
+    '/CharacterSection/profile/Madger Profile.png',
+    '/CharacterSection/profile/Málanus Profile.png',
+    '/CharacterSection/profile/San Profile.png',
+    '/CharacterSection/profile/Singer Profile.png',
   ];
 
-  const returnRandomCharacterPicture = () => {
-    const result =
-      profilePictures[Math.floor(Math.random() * profilePictures.length)];
-
-    console.log(result);
-
-    return result;
-  };
+  const returnRandomCharacterPicture = () => profilePictures[Math.floor(Math.random() * profilePictures.length)];
 
   const readerInProduction = () => {
     toggleNav();
@@ -68,11 +64,7 @@ const Navigation = ({
   };
 
   return (
-    <section
-      id="hello"
-      className="Navigation w-fit h-screen bg-[#bb5387] top-[3.9rem] pl-10 right-0 pr-[2vw] absolute z-50 flex flex-col justify-between"
-      ref={sectionRef}
-    >
+    <section id="hello" className="Navigation w-fit h-screen bg-[#bb5387] top-[3.9rem] pl-10 right-0 pr-[2vw] absolute z-50 flex flex-col justify-between" ref={sectionRef}>
       <div>
         <ul className="navUl text-right mt-[5vh] text-xl flex flex-col gap-[5vh]">
           <li key="home">
