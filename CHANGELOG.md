@@ -17,3 +17,15 @@ Enlgish version of the website available
 
 - New availability for English language version for this website
 - Language switcher in the navbar to easily toggle the language of the website between Portuguese and English
+
+## 2024-06-28 [Eduardo Barbosa]
+
+New character added to the character section
+
+### Added
+
+- Character Kaononai added to the character section
+
+### Fixed
+
+- design of the information section when cliking on a character fixed, now small names wont brake the layout

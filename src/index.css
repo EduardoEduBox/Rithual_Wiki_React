@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* * {
+  border: solid 1px red;
+} */
+
 body {
   font-family: 'Outfit', sans-serif;
   background-color: #1c1c1c;
